@@ -1,0 +1,19 @@
+<div class="container">
+<h1><%= @article.title %>
+  <%= link_to edit_article_path(@article) do %>
+    <i class="fa fa-pencil" aria-hidden="true"></i>
+  <% end %>
+  <%= link_to article_path(@article), method: :delete,
+    data: { confirm: "Are you sure you want to delete this article?" } do %>
+  <i class="fa fa-trash" aria-hidden="true"></i>
+  <% end %>
+</h1>
+
+<p><%= @article.content %></p>
+<%# @md %>
+<p>-------------------------------------------------------------------------
+</p>
+<%= link_to "Go back to article list", articles_path %>
+</div>
+
+
